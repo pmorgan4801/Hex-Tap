@@ -29,5 +29,5 @@ $(document).ready(function () {
         $("#particles img").animate({marginTop: "-=300px", opacity: "0.1"}, 2000, function () {$(this).hide()});
     }
     
-    window.setInterval(function () {hexParticles()}, 100);
+    window.setInterval(function () {hexParticles()}, 200);
 });
