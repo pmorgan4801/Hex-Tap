@@ -10,21 +10,21 @@ body {
 	margin-left: 30%;
 	margin-top: 50px;
 }
-.hexpart {
-	position: absolute;
-}
 
-#hexsmall {
-    opacity: 0;
+.hexsmall {
+    opacity: 1;
     width: 20%;
+    position: absolute;
 }
 
-#hexmedium {
-    opacity: 0;
+.hexmedium {
+    opacity: 1;
     width: 30%;
+    position: absolute;
 }
 
-#hexlarge {
-    opacity: 0;
+.hexlarge {
+    opacity: 1;
     width: 40%;
+    position: absolute;
 }
