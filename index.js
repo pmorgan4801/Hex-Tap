@@ -29,7 +29,7 @@ $(document).ready(function () {
         $("#particles img").animate({marginTop: "-=300px", opacity: "0.1"}, 2000, function () {$(this).hide()});
     }
     
-    var usePart = true;
+    var usePart = false;
     
     if (usePart){
         window.setInterval(function () {hexParticles()}, 200);
