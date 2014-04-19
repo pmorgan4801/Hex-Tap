@@ -26,12 +26,12 @@ $(document).ready(function () {
         }
         
         $("#particles").append(hex);
-        $("#particles img").animate({marginTop: "-=600px", opacity: "0.1"}, 4000, function () {$(this).hide()});
+        $("#particles img").animate({marginTop: "-=300px", opacity: "0.1"}, 2000, function () {$(this).hide()});
     }
     
-    var usePart = false;
+    var usePart = true;
     
     if (usePart){
-        window.setInterval(function () {hexParticles()}, 300);
+        window.setInterval(function () {hexParticles()}, 200);
     }
 });
