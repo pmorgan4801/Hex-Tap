@@ -8,7 +8,7 @@ body {
 #title {
 	width: 50%;
 	margin-left: 25%;
-	margin-top: 50px;
+	margin-top: 10%;
 }
 
 #particles{
@@ -32,4 +32,21 @@ body {
     opacity: 1;
     width: 40%;
     position: absolute;
+}
+
+#playbutton {
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 5%;
+    margin-bottom: -15px;
+}
+
+#settingsbutton {
+    width: 30%;
+    margin-left: 17%;
+}
+
+#scoresbutton {
+    width: 30%;
+    margin-left: 5%;
 }
