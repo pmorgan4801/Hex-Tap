@@ -13,3 +13,18 @@ body {
 .hexpart {
 	position: absolute;
 }
+
+#hexsmall {
+    opacity: 0;
+    width: 20%;
+}
+
+#hexmedium {
+    opacity: 0;
+    width: 30%;
+}
+
+#hexlarge {
+    opacity: 0;
+    width: 40%;
+}
