@@ -2,6 +2,9 @@ $(document).ready(function () {
 	var screenWidth = $(document).width();
     var screenHeight = $(document).height();
     
+    $("#particles").css( "height", screenHeight.toString() + "px");
+    $("#particles").css( "width", screenWidth.toString() + "px");
+    
     var hexSmallOb = document.getElementsByClassName("hexSmall");
     var hexMediumOb = document.getElementsByClassName("hexmedium");
     var hexLargeOb = document.getElementsByClassName("hexlarge");
@@ -33,5 +36,5 @@ $(document).ready(function () {
         
     }
     
-    window.setInterval(function () {hexParticles()}, 100);
+    window.setInterval(function () {hexParticles()}, 1000);
 });

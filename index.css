@@ -11,6 +11,11 @@ body {
 	margin-top: 50px;
 }
 
+#particles{
+    overflow: hidden;
+    position: absolute;
+}
+
 .hexsmall {
     opacity: 1;
     width: 20%;
