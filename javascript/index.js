@@ -37,6 +37,6 @@ $(document).ready(function () {
     var usePart = true;
     
     if (usePart) {
-        window.setInterval(function () {hexParticles()}, 200);
+        window.setInterval(function () {hexParticles()}, 500);
     }
 });
