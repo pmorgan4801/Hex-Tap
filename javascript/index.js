@@ -5,33 +5,38 @@ $(document).ready(function () {
     $("#particles").css( "height", screenHeight.toString() + "px");
     $("#particles").css( "width", screenWidth.toString() + "px");
     
+    var id = 1;
+    
     function hexParticles() {
         var numb = Math.floor((Math.random() * 3) + 1);
         var hex = "";
         if (numb === 1) {
             var spawn = Math.floor(((Math.random() * screenWidth) + 1) - (0.5 * $(".hexsmall").width()));
-            var hexSmallPlace = screenHeight - (0.5 * $(".hexsmall").height());
-            var hexSmall = '<img style="margin-left: ' + spawn.toString() + 'px; margin-top: ' + hexSmallPlace.toString() + 'px;" class="hexsmall" src="img/hex50.png">';
+            var hexSmall = '<img id="h' + id.toString() + '" style="margin-left: ' + spawn.toString() + 'px; margin-top: ' + screenHeight.toString() + 'px;" class="hexsmall" src="img/hex50.png">';
             hex = hexSmall;
         } else if (numb === 2) {
             var spawn = Math.floor(((Math.random() * screenWidth) + 1) - (0.5 * $(".hexmedium").width()));
-            var hexMediumPlace = screenHeight - (0.5 * ($(".hexmedium").height()));
-            var hexMedium = '<img style="margin-left: ' + spawn.toString() + 'px; margin-top: ' + hexMediumPlace.toString() + 'px;" class="hexmedium" src="img/hex75.png">';
+            var hexMedium = '<img id="h' + id.toString() + '" style="margin-left: ' + spawn.toString() + 'px; margin-top: ' + screenHeight.toString() + 'px;" class="hexmedium" src="img/hex75.png">';
             hex = hexMedium;
         } else if (numb === 3) {
             var spawn = Math.floor(((Math.random() * screenWidth) + 1) - (0.5 * $(".hexlarge").width()));
-            var hexLargePlace = screenHeight - (0.5 * ($(".hexlarge").height()));
-            var hexLarge = '<img style="margin-left: ' + spawn.toString() + 'px; margin-top: ' + hexLargePlace.toString() + 'px;" class="hexlarge" src="img/hex100.png">';
+            var hexLarge = '<img id="h' + id.toString() + '" style="margin-left: ' + spawn.toString() + 'px; margin-top: ' + screenHeight.toString() + 'px;" class="hexlarge" src="img/hex100.png">';
             hex = hexLarge;
         }
         
         $("#particles").append(hex);
-        $("#particles img").animate({marginTop: "-=300px", opacity: "0.1"}, 2000, function () {$(this).hide()});
+        var idString = $("#h" + id.toString());
+        TweenMax.to(idString, 4, {css:{marginTop: "-=600px", opacity: "0"}, onComplete: completeHandler});
+        function completeHandler() {
+            idString.remove();
+        }
+        
+        id = id + 1;
     }
     
-    var usePart = false;
+    var usePart = true;
     
-    if (usePart){
+    if (usePart) {
         window.setInterval(function () {hexParticles()}, 200);
     }
 });
