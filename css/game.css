@@ -4,3 +4,6 @@ body {
 	margin: 0px;
 	z-index: 1;
 }
+#head {
+	height: 20%;
+}
