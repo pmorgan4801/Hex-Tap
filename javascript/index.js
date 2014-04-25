@@ -26,10 +26,7 @@ $(document).ready(function () {
         
         $("#particles").append(hex);
         var idString = $("#h" + id.toString());
-        TweenMax.to(idString, 4, {css:{marginTop: "-=600px", opacity: "0"}, onComplete: completeHandler});
-        function completeHandler() {
-            idString.remove();
-        }
+        idString.transition({y: "-=600px", opacity: 0}, 3000);
         
         id = id + 1;
     }
@@ -37,6 +34,6 @@ $(document).ready(function () {
     var usePart = true;
     
     if (usePart) {
-        window.setInterval(function () {hexParticles()}, 500);
+        window.setInterval(function () {hexParticles()}, 400);
     }
 });
