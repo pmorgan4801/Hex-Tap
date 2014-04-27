@@ -50,7 +50,7 @@ $(document).ready(function () {
         id = id + 1;
     }
     
-    setTimeout(startPage, 8000);
+    setTimeout(startPage, 3000);
     function startPage() {
         $("#title").transition({marginTop: "20%"}, 3000);
         $("#playbutton").transition({opacity: 1}, 3000);
