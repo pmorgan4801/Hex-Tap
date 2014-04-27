@@ -2,13 +2,26 @@ body {
     background-color: #0D0E10;
     color: #e5e5e5;
 	margin: 0px;
-	z-index: 1;
+	overflow: hidden;
+}
+
+#aspectimage {
+    max-width: 100%;
+    max-height: 100%;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    opacity: 0;
 }
 
 #title {
 	width: 50%;
 	margin-left: 25%;
-	margin-top: 10%;
+	margin-top: 60%;
 }
 
 #particles{
@@ -39,14 +52,17 @@ body {
     margin-left: 35%;
     margin-top: 5%;
     margin-bottom: -15px;
+    opacity: 0;
 }
 
 #settingsbutton {
     width: 30%;
     margin-left: 17%;
+    opacity: 0;
 }
 
 #scoresbutton {
     width: 30%;
     margin-left: 5%;
+    opacity: 0;
 }

@@ -1,9 +1,28 @@
 $(document).ready(function () {
-	var screenWidth = $(document).width();
+    var screenWidth = $(document).width();
     var screenHeight = $(document).height();
     
     $("#particles").css( "height", screenHeight.toString() + "px");
     $("#particles").css( "width", screenWidth.toString() + "px");
+    
+    function doResize(divi, ima) {
+        $("body").css( "height", screenHeight.toString() + "px");
+        $("body").css( "width", screenWidth.toString() + "px");
+        
+        var div = $("#" + divi);
+        var img = $("#" + ima);
+        
+        div.css("width", img.css("width"));
+        div.css("height", img.css("height"));
+        div.css("margin", img.css("margin"));
+        div.css("margin", img.css("margin"));
+    }
+    
+    doResize("wrapper", "aspectimage");
+    
+    window.onresize = function () {
+        doResize("wrapper", "aspectimage");
+    }
     
     var id = 1;
     
@@ -31,9 +50,13 @@ $(document).ready(function () {
         id = id + 1;
     }
     
-    var usePart = true;
-    
-    if (usePart) {
+    setTimeout(startPage, 3000);
+    function startPage() {
+        $("#title").transition({marginTop: "20%"}, 3000);
+        $("#playbutton").transition({opacity: 1}, 3000);
+        $("#settingsbutton").transition({opacity: 1}, 3000);
+        $("#scoresbutton").transition({opacity: 1}, 3000);
+        
         window.setInterval(function () {hexParticles()}, 400);
     }
 });
