@@ -22,7 +22,7 @@ $(document).ready(function() {
     }
 
     var mult = 8;
-    $("#hex").click(function() {
+    $("#hex").hammer().on("tap", function() {
         $("#score").html((Number($("#score").html()) + mult).toString());
     });
 });
