@@ -21,8 +21,12 @@ $(document).ready(function() {
         doResize("wrapper", "aspectimage");
     }
 
+    var hammer_options = {
+
+    };
+
     var mult = 8;
-    $("#hex").hammer().on("tap", function() {
+    $("#hex").hammer(hammer_options).on("tap pinch", function() {
         $("#score").html((Number($("#score").html()) + mult).toString());
     });
 });
