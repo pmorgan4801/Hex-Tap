@@ -45,7 +45,7 @@ $(document).ready(function () {
         
         $("#particles").append(hex);
         var idString = $("#h" + id.toString());
-        idString.transition({y: "-=600px", opacity: 0}, 3000);
+        idString.transition({y: "-=600px", opacity: 0}, 4000);
         
         id = id + 1;
     }
@@ -57,6 +57,6 @@ $(document).ready(function () {
         $("#settingsbutton").transition({opacity: 1}, 3000);
         $("#scoresbutton").transition({opacity: 1}, 3000);
         
-        window.setInterval(function () {hexParticles()}, 400);
+        window.setInterval(function () {hexParticles()}, 300);
     }
 });

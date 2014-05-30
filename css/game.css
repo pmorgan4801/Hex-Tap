@@ -3,6 +3,9 @@ body {
     color: #e5e5e5;
     margin: 0px;
     overflow: hidden;
+    font-family: poiret-one;
+    font-weight: 900;
+    color: #689dbc;
 }
 
 #aspectimage {
@@ -16,9 +19,15 @@ body {
     right: 0;
     top: 0;
     opacity: 0;
+    z-index: -1;
 }
 
-.hex {
-    width: 30%;
-    margin-left: 1.9%;
+#hex {
+    width: 70%;
+    margin: 15px auto;
+}
+#score {
+    margin: 0;
+    text-align: center;
+    font-size: 40px;
 }

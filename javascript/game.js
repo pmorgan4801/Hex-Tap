@@ -20,4 +20,9 @@ $(document).ready(function() {
     window.onresize = function () {
         doResize("wrapper", "aspectimage");
     }
+
+    var mult = 1;
+    $("#hex").hammer().on("tap",function() {
+        $("#score").html((Number($("#score").html()) + 2).toString());
+    });
 });
