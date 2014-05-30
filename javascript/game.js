@@ -21,8 +21,8 @@ $(document).ready(function() {
         doResize("wrapper", "aspectimage");
     }
 
-    var mult = 1;
-    $("#hex").hammer().on("tap",function() {
-        $("#score").html((Number($("#score").html()) + 2).toString());
+    var mult = 8;
+    $("#hex").click(function() {
+        $("#score").html((Number($("#score").html()) + mult).toString());
     });
 });
